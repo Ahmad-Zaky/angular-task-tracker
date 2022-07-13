@@ -6,38 +6,38 @@
     formControlName="id"
   />
 
-    <div class="form-control">
-      <label for="text">Task</label>
-      <input
-        type="text"
-        name="text"
-        id="text"
-        placeholder="Add Task"
-        formControlName="text"
-      />
-      <span class="text-danger"
-          *ngIf="(text?.invalid && (text?.dirty || text?.touched) || (submitted && ! validated))">
-          Text is required
-      </span>
-    </div>
-    <div class="form-control">
-      <label for="day">Day & Time</label>
-      <input
-        type="text"
-        name="day"
-        formControlName="day"
-        id="day"
-        placeholder="Add Day & Time"
-      />
-    </div>
-    <div class="form-control form-control-check">
-      <label for="reminder">Set Reminder</label>
-      <input
-        type="checkbox"
-        name="reminder"
-        formControlName="reminder"
-        id="reminder"
-      />
-    </div>
-    <input type="submit" value="Save Task" class="btn btn-block" [disabled]="! taskForm.valid || submitted"/>
-  </form>
+  <div class="form-control">
+    <label for="text">Task</label>
+    <input
+      type="text"
+      name="text"
+      id="text"
+      placeholder="Add Task"
+      formControlName="text"
+    />
+    <span class="text-danger"
+        *ngIf="(text?.invalid && (text?.dirty || text?.touched) || (submitted && ! validated))">
+        Text is required
+    </span>
+  </div>
+  <div class="form-control">
+    <label for="day">Day & Time</label>
+    <input
+      type="text"
+      name="day"
+      formControlName="day"
+      id="day"
+      placeholder="Add Day & Time"
+    />
+  </div>
+  <div class="form-control form-control-check">
+    <label for="reminder">Set Reminder</label>
+    <input
+      type="checkbox"
+      name="reminder"
+      formControlName="reminder"
+      id="reminder"
+    />
+  </div>
+  <input type="submit" value="Save Task" class="btn btn-block" [disabled]="! taskForm.valid || submitted"/>
+</form>
